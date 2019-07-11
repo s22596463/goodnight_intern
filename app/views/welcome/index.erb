@@ -9,9 +9,9 @@
   minutes = date.getMinutes();
   month = date.getMonth()+1;
   now = date.getFullYear()+"/";
-  now += ((month< 10) ? "0" : " ") + month + "";
-  now += date.getDate()+"  ";
-  now += ((hours > 12) ? hours - 12 : hours) + " :";
+  now += ((month< 10) ? "0" : " ") + month + "/";
+  now += date.getDate()+"    ";
+  now += ((hours > 12) ? hours - 12 : hours) + ":";
   now += ((minutes < 10) ? "0" : " ") + minutes + "";
   now += (hours >= 12) ? "PM" : "AM";
   document.getElementById("nowDiv").innerHTML = now; //div的html是now这个字符串
@@ -20,7 +20,7 @@
 
 </script>
 <b>
-<font size="10">
+<font size="6">
 <body onload="show()">
 <div id="nowDiv"></div>
 </body
