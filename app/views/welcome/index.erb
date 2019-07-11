@@ -10,10 +10,10 @@
   month = date.getMonth()+1;
   now = date.getFullYear()+"/";
   now += ((month< 10) ? "0" : " ") + month + "/";
-  now += date.getDate()+"    ";
+  now += date.getDate()+"     ";
   now += ((hours > 12) ? hours - 12 : hours) + ":";
   now += ((minutes < 10) ? "0" : " ") + minutes + "";
-  now += (hours >= 12) ? "PM" : "AM";
+  now += (hours >= 12) ? " PM" : " AM";
   document.getElementById("nowDiv").innerHTML = now; //div的html是now这个字符串
   setTimeout("show()",1000); //设置过1000毫秒就是1秒，调用show方法
   }
