@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.1', :engine => 'jruby', :engine_version => '9.1.8.0'
+ruby '2.3.3', :engine => 'jruby', :engine_version => '9.1.17.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -34,7 +34,6 @@ gem 'spring',        group: :development
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :jruby]
 
 gem 'puma'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
