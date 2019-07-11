@@ -4,14 +4,15 @@
   function show(){
   var date = new Date(); //日期对象
   var now = "";
-  var hours,minutes;
+  var hours,minutes,month;
   hours = date.getHours();
   minutes = date.getMinutes();
+  month = date.getMonth()+1;
   now = date.getFullYear()+"/";
-  now += (date.getMonth()+1)+"/";
+  now += ((month< 10) ? "0" : " ") + month + "";
   now += date.getDate()+"  ";
   now += ((hours > 12) ? hours - 12 : hours) + " :";
-  now += ((minutes < 10) ? " 0" : " ") + minutes + " 分";
+  now += ((minutes < 10) ? "0" : " ") + minutes + "";
   now += (hours >= 12) ? "PM" : "AM";
   document.getElementById("nowDiv").innerHTML = now; //div的html是now这个字符串
   setTimeout("show()",1000); //设置过1000毫秒就是1秒，调用show方法
@@ -19,7 +20,7 @@
 
 </script>
 <b>
-<font size="3">
+<font size="10">
 <body onload="show()">
 <div id="nowDiv"></div>
 </body
